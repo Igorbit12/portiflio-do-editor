@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrate um Editor de Vídeo - Igor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200%;
+            background: url('https://hypescience.com/wp-content/uploads/2014/06/Space.tga_.jpg') no-repeat;
+            background-size: 120%;
+            animation: moveBackground 30s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            from {
+                left: 0;
+            }
+            to {
+                left: -100%;
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .profile {
+            margin: 20px 0;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: 2px solid white;
+        }
+
+        .profile h2 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .section div {
+            width: 45%;
+            text-align: center;
+        }
+
+        .section img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <h1>Contrate um Editor de Vídeo - Igor</h1>
+
+        <div class="profile">
+            <img src="https://i1.sndcdn.com/avatars-000425326518-6qekg1-t240x240.jpg" alt="Foto de Perfil">
+            <h2>Igor</h2>
+        </div>
+
+        <div class="section">
+            <div>
+                <h3>Por que utilizar o Adobe Premiere?</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Adobe_Premiere_Pro_CC_icon.svg" alt="Logo Adobe Premiere">
+                <p>O Adobe Premiere é uma das ferramentas mais poderosas para edição de vídeos profissionais, garantindo um trabalho de alta qualidade.</p>
+            </div>
+            <div>
+                <h3>Por que contratar um editor de vídeo?</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Icon-video-play.svg/1200px-Icon-video-play.svg.png" alt="Ícone de Vídeo">
+                <p>Contratar um editor de vídeo profissional como Igor garante resultados rápidos e de alta qualidade, tornando seu conteúdo impactante.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
