@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contrate Igor, um editor de vídeo profissional especializado no Adobe Premiere, para criar conteúdos de alta qualidade.">
+    <meta name="keywords" content="Editor de vídeo, Adobe Premiere, Edição de vídeo, Contratar editor">
+    <meta name="author" content="Igor">
+    <title>Contrate um Editor de Vídeo - Igor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: 'Roboto', Arial, sans-serif;
+            overflow: hidden;
+            background-color: #000;
+            color: white;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200%;
+            background: url('https://hypescience.com/wp-content/uploads/2014/06/Space.tga_.jpg') no-repeat center center;
+            background-size: cover;
+            animation: moveBackground 30s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes moveBackground {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .profile {
+            margin: 20px 0;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            border: 3px solid white;
+        }
+
+        .profile h2 {
+            margin-top: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .section div {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .section p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <h1>Contrate um Editor de Vídeo - Igor</h1>
+
+        <div class="profile">
+            <img src="https://i1.sndcdn.com/avatars-000425326518-6qekg1-t240x240.jpg" alt="Foto de Perfil de Igor">
+            <h2>Igor</h2>
+        </div>
+
+        <div class="section">
+            <div>
+                <h3>Por que utilizar o Adobe Premiere?</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Adobe_Premiere_Pro_CC_icon.svg" alt="Logo do Adobe Premiere">
+                <p>O Adobe Premiere é uma das ferramentas mais poderosas para edição de vídeos profissionais, garantindo um trabalho de alta qualidade.</p>
+            </div>
+            <div>
+                <h3>Por que contratar um editor de vídeo?</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Icon-video-play.svg/1200px-Icon-video-play.svg.png" alt="Ícone representando edição de vídeo">
+                <p>Contratar um editor de vídeo profissional como Igor garante resultados rápidos e de alta qualidade, tornando seu conteúdo impactante.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Igor - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
