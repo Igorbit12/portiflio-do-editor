@@ -120,6 +120,21 @@
         .audio-hover {
             cursor: pointer;
         }
+
+        /* Estilos para o código */
+        pre {
+            background-color: #333;
+            color: #f1f1f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+        }
     </style>
 </head>
 <body>
@@ -159,5 +174,32 @@
             audio.play();
         }
     </script>
+
+    <!-- Exibição dos comandos Git no site -->
+    <section>
+        <h2>Passos para enviar para o GitHub:</h2>
+        <pre>
+            <code>
+# 1. Abra o terminal e navegue até a pasta do seu site:
+cd caminho/para/a/pasta/meu-site
+
+# 2. Adicione o repositório remoto do GitHub:
+git remote add origin https://github.com/SEU_USUARIO/meu-site.git
+
+# 3. Adicione os arquivos ao controle de versão:
+git add .
+
+# 4. Faça o commit com uma mensagem:
+git commit -m "Adiciona arquivo index.html"
+
+# 5. Renomeie a branch principal para "main" (se necessário):
+git branch -M main
+
+# 6. Envie as alterações para o repositório no GitHub:
+git push -u origin main
+            </code>
+        </pre>
+    </section>
+
 </body>
 </html>
