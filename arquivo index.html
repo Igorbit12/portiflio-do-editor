@@ -115,6 +115,11 @@
             font-size: 0.9rem;
             color: #aaa;
         }
+
+        /* Adicionando estilo ao som do hover */
+        .audio-hover {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -128,12 +133,12 @@
         </div>
 
         <div class="section">
-            <div>
+            <div class="audio-hover" onmouseover="playSound()">
                 <h3>Por que utilizar o Adobe Premiere?</h3>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Adobe_Premiere_Pro_CC_icon.svg" alt="Logo do Adobe Premiere">
                 <p>O Adobe Premiere é uma das ferramentas mais poderosas para edição de vídeos profissionais, garantindo um trabalho de alta qualidade.</p>
             </div>
-            <div>
+            <div class="audio-hover" onmouseover="playSound()">
                 <h3>Por que contratar um editor de vídeo?</h3>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Icon-video-play.svg/1200px-Icon-video-play.svg.png" alt="Ícone representando edição de vídeo">
                 <p>Contratar um editor de vídeo profissional como Igor garante resultados rápidos e de alta qualidade, tornando seu conteúdo impactante.</p>
@@ -144,5 +149,15 @@
             <p>© 2025 Igor - Todos os direitos reservados.</p>
         </footer>
     </div>
+
+    <audio id="audio" src="seu_efeito_sonoro.mp3" preload="auto"></audio>
+
+    <script>
+        // Função para tocar o áudio ao passar o mouse sobre o vídeo
+        function playSound() {
+            var audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
