@@ -19,187 +19,316 @@
             height: 100%;
             width: 100%;
             font-family: 'Roboto', Arial, sans-serif;
-            overflow: hidden;
-            background-color: #000;
             color: white;
+            overflow-x: hidden;
         }
 
+        /* Efeito de fundo em movimento */
         .background {
             position: absolute;
             top: 0;
             left: 0;
-            height: 100%;
             width: 200%;
+            height: 100%;
             background: url('https://hypescience.com/wp-content/uploads/2014/06/Space.tga_.jpg') no-repeat center center;
             background-size: cover;
             animation: moveBackground 30s linear infinite;
-            z-index: 0;
         }
 
         @keyframes moveBackground {
             from {
-                transform: translateX(0);
+                left: 0;
             }
             to {
-                transform: translateX(-50%);
+                left: -100%;
             }
         }
 
-        .content {
+        .container {
             position: relative;
             z-index: 1;
-            text-align: center;
             padding: 20px;
         }
 
-        h1 {
-            font-size: 2.5rem;
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-direction: column;
+        }
+
+        .header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        .profile {
-            margin: 20px 0;
-        }
-
-        .profile img {
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            border: 3px solid white;
-        }
-
-        .profile h2 {
-            margin-top: 10px;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .section {
+        .navigation {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            margin-top: 40px;
-            padding: 0 20px;
-        }
-
-        .section div {
-            width: 100%;
-            max-width: 400px;
-            margin: 20px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .section img {
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            margin-bottom: 15px;
-        }
-
-        .section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .section p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        footer {
+            gap: 30px;
             margin-top: 20px;
-            font-size: 0.9rem;
-            color: #aaa;
+            font-size: 20px;
         }
 
-        /* Adicionando estilo ao som do hover */
-        .audio-hover {
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+
+        .navigation a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .premiere-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .premiere-info img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 5px; /* Reduziu o espaçamento */
+        }
+
+        .premiere-info .text {
+            width: 45%;
+            font-size: 18px;
+            margin-top: 5px; /* Reduziu o espaçamento */
+        }
+
+        .custom-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .custom-info img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 5px; /* Reduziu o espaçamento */
+        }
+
+        .custom-info .text {
+            width: 45%;
+            font-size: 18px;
+            margin-top: 5px; /* Reduziu o espaçamento */
+        }
+
+        .shorts {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px; /* Reduziu o espaçamento */
+        }
+
+        .short {
+            width: 180px;
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+            background-color: black;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.3s;
+            margin: 10px;
+        }
+
+        .short:hover {
+            transform: scale(1.1);
+        }
+
+        .short img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .short iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            object-fit: cover;
+        }
+
+        .short .play-text {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cookie-banner button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
             cursor: pointer;
         }
 
-        /* Estilos para o código */
-        pre {
-            background-color: #333;
-            color: #f1f1f1;
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 50%;
             padding: 15px;
-            border-radius: 8px;
-            margin-top: 30px;
-            overflow-x: auto;
-            font-size: 1rem;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        code {
-            font-family: 'Courier New', monospace;
+        .whatsapp-button img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+
+        .section {
+            padding: 50px 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="content">
-        <h1>Contrate um Editor de Vídeo - Igor</h1>
-
-        <div class="profile">
-            <img src="https://i1.sndcdn.com/avatars-000425326518-6qekg1-t240x240.jpg" alt="Foto de Perfil de Igor">
-            <h2>Igor</h2>
-        </div>
-
-        <div class="section">
-            <div class="audio-hover" onmouseover="playSound()">
-                <h3>Por que utilizar o Adobe Premiere?</h3>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Adobe_Premiere_Pro_CC_icon.svg" alt="Logo do Adobe Premiere">
-                <p>O Adobe Premiere é uma das ferramentas mais poderosas para edição de vídeos profissionais, garantindo um trabalho de alta qualidade.</p>
-            </div>
-            <div class="audio-hover" onmouseover="playSound()">
-                <h3>Por que contratar um editor de vídeo?</h3>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Icon-video-play.svg/1200px-Icon-video-play.svg.png" alt="Ícone representando edição de vídeo">
-                <p>Contratar um editor de vídeo profissional como Igor garante resultados rápidos e de alta qualidade, tornando seu conteúdo impactante.</p>
+    <div class="background"></div> <!-- Fundo com o movimento -->
+    <div class="container">
+        <div class="header">
+            <img src="https://i1.sndcdn.com/avatars-000425326518-6qekg1-t240x240.jpg" alt="Foto de Perfil">
+            <h1>Portfólio - Editor de Vídeos</h1>
+            <div class="navigation">
+                <a href="#sobre">Sobre</a>
+                <a href="#trabalho">Trabalho</a>
+                <a href="#contato">Contato</a>
             </div>
         </div>
-        
-        <footer>
-            <p>© 2025 Igor - Todos os direitos reservados.</p>
-        </footer>
+
+        <!-- Seção Adobe Premiere -->
+        <div class="section premiere-info">
+            <img src="https://ih1.redbubble.net/image.1344207599.3136/raf,360x360,075,t,fafafa:ca443f4786.jpg" alt="Adobe Premiere">
+            <div class="text">
+                <p>Eu escolho o Adobe Premiere porque ele é uma das ferramentas mais poderosas e versáteis para edição de vídeos. Com uma interface intuitiva, recursos avançados de edição e integração perfeita com outros softwares da Adobe, o Premiere permite criar vídeos de qualidade profissional.</p>
+            </div>
+        </div>
+
+        <!-- Nova Seção (com a troca da imagem e texto) -->
+        <div class="section custom-info">
+            <div class="text">
+                <p>Esta imagem representa a criatividade e o estilo único que trago para todos os meus projetos de edição. Para mim, a edição vai além da técnica – é uma forma de contar histórias visualmente inesquecíveis.</p>
+            </div>
+            <img src="https://images.pexels.com/photos/8102677/pexels-photo-8102677.jpeg" alt="Criatividade">
+        </div>
+
+        <!-- Seção de Trabalhos -->
+        <div class="section" id="trabalho">
+            <h2>Trabalho</h2>
+            <p>Veja alguns dos meus vídeos editados utilizando as ferramentas profissionais do Adobe Premiere.</p>
+            <div class="shorts">
+                <div class="short" onclick="showVideo(this)">
+                    <img src="https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg" alt="Thumbnail do Vídeo 1">
+                    <iframe src="https://www.youtube.com/embed/Z2D6gWu78NE" frameborder="0" allowfullscreen></iframe>
+                    <div class="play-text">Clique para reproduzir o vídeo</div>
+                </div>
+                <div class="short" onclick="showVideo(this)">
+                    <img src="https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg" alt="Thumbnail do Vídeo 2">
+                    <iframe src="https://www.youtube.com/embed/xYcdKP39EPI" frameborder="0" allowfullscreen></iframe>
+                    <div class="play-text">Clique para reproduzir o vídeo</div>
+                </div>
+                <div class="short" onclick="showVideo(this)">
+                    <img src="https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg" alt="Thumbnail do Vídeo 3">
+                    <iframe src="https://www.youtube.com/embed/9GLvyIdJfnM" frameborder="0" allowfullscreen></iframe>
+                    <div class="play-text">Clique para reproduzir o vídeo</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="contato">
+            <h2>Contato</h2>
+            <p>Se você quiser discutir um projeto ou agendar um trabalho, entre em contato comigo pelo WhatsApp ou através do formulário abaixo.</p>
+        </div>
     </div>
 
-    <audio id="audio" src="seu_efeito_sonoro.mp3" preload="auto"></audio>
+    <div class="cookie-banner" id="cookie-banner">
+        Este site usa cookies para melhorar sua experiência. <button onclick="acceptCookies()">Aceitar</button>
+    </div>
+
+    <audio id="pop-sound" src="C:/Users/Igor/Downloads/minimal-pop-click-ui-1-198301.mp3"></audio>
+    <a href="https://api.whatsapp.com/send?phone=5514998974700&text=Ol%C3%A1,%20gostaria%20de%20fazer%20uma%20agenda." class="whatsapp-button" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN" alt="WhatsApp">
+    </a>
 
     <script>
-        // Função para tocar o áudio ao passar o mouse sobre o vídeo
-        function playSound() {
-            var audio = document.getElementById('audio');
-            audio.play();
+        function showVideo(element) {
+            var iframe = element.querySelector('iframe');
+            var img = element.querySelector('img');
+            var playText = element.querySelector('.play-text');
+            var popSound = document.getElementById("pop-sound");
+
+            if (!popSound.paused) {
+                popSound.currentTime = 0;
+            }
+
+            img.style.display = 'none';
+            playText.style.display = 'none';
+            iframe.style.display = 'block';
+            popSound.play();
         }
+
+        function acceptCookies() {
+            document.getElementById("cookie-banner").style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        function checkCookies() {
+            if (localStorage.getItem('cookiesAccepted') === 'true') {
+                document.getElementById("cookie-banner").style.display = 'none';
+            }
+        }
+
+        checkCookies();
     </script>
-
-    <!-- Exibição dos comandos Git no site -->
-    <section>
-        <h2>Passos para enviar para o GitHub:</h2>
-        <pre>
-            <code>
-# 1. Abra o terminal e navegue até a pasta do seu site:
-cd caminho/para/a/pasta/meu-site
-
-# 2. Adicione o repositório remoto do GitHub:
-git remote add origin https://github.com/SEU_USUARIO/meu-site.git
-
-# 3. Adicione os arquivos ao controle de versão:
-git add .
-
-# 4. Faça o commit com uma mensagem:
-git commit -m "Adiciona arquivo index.html"
-
-# 5. Renomeie a branch principal para "main" (se necessário):
-git branch -M main
-
-# 6. Envie as alterações para o repositório no GitHub:
-git push -u origin main
-            </code>
-        </pre>
-    </section>
-
 </body>
 </html>
